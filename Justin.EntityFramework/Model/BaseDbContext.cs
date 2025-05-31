@@ -3,16 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Justin.EntityFramework.Model {
-    public class BaseDbContext : DbContext {
+    public class BaseDbContext<TContext>(DbContextOptions<TContext> options, IHttpContextAccessor httpContextAccessor) : DbContext(options) where TContext : DbContext {
 
-        private readonly IHttpContextAccessor _httpContextAccessor;
-
-        public BaseDbContext(DbContextOptions<BaseDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options) {
-
-            _httpContextAccessor = httpContextAccessor;
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
-        }
+        private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
         #region Db Setup
 

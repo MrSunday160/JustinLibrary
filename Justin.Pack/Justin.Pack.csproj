@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Version>1.0.0</Version>
+	  <Authors>Justin Thejasukmana</Authors>
+	  <Description>Reusable EF Core base classes and configs</Description>
+	  <PackageId>Justin.Pack</PackageId>
+	  <IncludeBuildOutput>false</IncludeBuildOutput>
+	  <PackageTags>efcore base architecture</PackageTags>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Justin.EntityFramework\Justin.EntityFramework.csproj"/>
+	</ItemGroup>
+
+</Project>

@@ -11,7 +11,7 @@ namespace Justin.EntityFramework.Controller {
     public abstract class BaseController<TEntity>(IBaseService<TEntity> baseService) : ControllerBase where TEntity : Base {
 
         private readonly IBaseService<TEntity> _baseService = baseService;
-
+        
         [HttpGet]
         public virtual async Task<IActionResult> Get() {
 

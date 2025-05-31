@@ -11,9 +11,9 @@ namespace Justin.EntityFramework.Service {
         Task<CrudResponse> Delete(TEntity data, bool deleteChanges = false);
         Task<PagedList<TEntity>> GetByFilter(PagedOptions pagedOptions);
     }
-    public class BaseService<TEntity>(BaseDbContext dbContext) : IBaseService<TEntity> where TEntity : Base {
+    public class BaseService<TEntity>(DbContext dbContext) : IBaseService<TEntity> where TEntity : Base {
 
-        private readonly BaseDbContext _dbContext = dbContext;
+        private readonly DbContext _dbContext = dbContext;
 
         #region Get
 
