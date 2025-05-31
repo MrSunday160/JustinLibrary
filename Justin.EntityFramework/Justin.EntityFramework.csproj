@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-	<Version>1.0.0</Version>
+	<Version>1.0.1</Version> <!-- Nuget Version -->
+	<AssemblyVersion>1.0.1.0</AssemblyVersion> <!-- Assembly Version -> change when updating dependencies that may break stuff! -->
     <Nullable>disable</Nullable>
 
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="9.0.5" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
 	  
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
